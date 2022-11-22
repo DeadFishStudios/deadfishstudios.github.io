@@ -1,0 +1,29 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --active: hsla(0, 100%, 50%, 1.0);
+    --primary: hsla(0, 0%, 100%, 1.0);
+    --secondary: hsla(0, 0%, 0%, 1.0);
+    --tertiary: hsla(0, 0%, 50%, 1.0);
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 9fr 2fr;
+    grid-template-rows: 0.5fr 11fr 0.5fr;
+    grid-template-areas: 'h h h' 'm m n' ' f f n';
+    gap: 0.25em;
+    padding: 0.5em;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+header {grid-area: h;}
+main {grid-area: m;}
+nav {grid-area: n;}
+footer {grid-area: f;}
+
+header, main, nav, footer {background-color: var(--tertiary);}
