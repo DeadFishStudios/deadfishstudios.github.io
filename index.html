@@ -40,28 +40,32 @@
             */
         }
 
-        nav ul {
+        ul {
             list-style: none;
         }
 
-        nav ul li {
+        ul li {
+            width: calc(100% / 11);
             display: inline-block;
             position: relative;
         }
 
-        nav ul li a {
+        ul li a {
             display: block;
+            /*
             padding: 0.0625em 1em;
+            */
             text-decoration: none;
             text-align: center;
             color: var(--primary);
         }
 
-        nav ul li ul.dropdown li {
+        ul li ul.dropdown li {
+            width: 100%;
             display: block;
         }
 
-        nav ul li ul.dropdown {
+        ul li ul.dropdown {
             width: 100%;
             position: absolute;
             z-index: 999;
@@ -72,14 +76,14 @@
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         }
 
-        nav ul li a:hover {
+        ul li a:hover {
             background-color: var(--action);
             color: var(--primary);
             /*
             */
         }
 
-        nav ul li:hover ul.dropdown {
+        ul li:hover ul.dropdown {
             display: block;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         }
@@ -93,7 +97,7 @@
             grid-auto-rows: max-content;
             grid-auto-columns: max-content;
             */
-            grid-template-rows: .5fr .25fr .25fr 1.25fr 3.5fr .25fr;
+            grid-template-rows: .25fr .25fr .25fr 1.25fr 3.5fr .25fr;
             grid-template-columns: repeat(6 1fr);
             grid-template-areas:
             /*
@@ -104,12 +108,12 @@
             'e e e e e e'
             'f f f f f f';
             */
-                'h h n n n n'
+                'h h h h h h'
+                'n n n n n n'
                 'e e e e s s'
                 'e e e e r r'
                 'e e e e r r'
-                'e e e e r r'
-                'f f f f f f';
+                'e e e e f f';
             gap: 0em;
             padding: 0;
         }
@@ -142,7 +146,7 @@
 
         footer {
             grid-area: f;
-            color: var(--action);
+            color: var(--primary);
             /*
             background-color: var(--secondary);
             */
@@ -151,8 +155,8 @@
         #search_result {
             grid-area: r;
             overflow-y: auto;
+            background-color: var(--tertiary);
             /*
-            background-color: var(--secondary);
             */
         }
 
@@ -178,7 +182,7 @@
         #search_result .dirs {
             display: block;
             background-color: var(--action);
-            color: var(--primary);
+            color: var(--tertiary);
         }
         #search_result .dirs:hover {
             color: var(--secondary);
@@ -238,6 +242,17 @@
     </header>
     <nav id="side">
         <ul class="menu">
+        </ul>
+        <ul class="menu">
+            <li class="menu_item">
+                <a class="menu_title" target="main_frame" href="./templates/home.html">Home</a>
+            </li>
+            <li class="menu_item">
+                <a class="menu_title" target="main_frame" href="./templates/about.html">About</a>
+            </li>
+            <li class="menu_item">
+                <a class="menu_title" target="main_frame" href="./templates/contact.html">Contact</a>
+            </li>
             <li class="menu_item">
                 <a class="menu_title" href="#">2000</a>
                 <ul class="dropdown">
@@ -364,7 +379,7 @@
     </div>
     <embed id="main_frame" src="./templates/home.html" type="">
     <!-- <main></main> -->
-    <footer>footer</footer>
+    <footer><sup>est. 1986 &copy; &trade;</sup></footer>
     <script defer>
         // script to create dummy links
         const sr = document.querySelector("#search_result");
