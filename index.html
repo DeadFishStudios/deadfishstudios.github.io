@@ -132,7 +132,7 @@
             background-color: var(--secondary);
             */
         }
-
+        iframe,
         embed {
             grid-area: e;
             width: 100%;
@@ -163,6 +163,7 @@
         header,
         nav,
         embed,
+        iframe,
         main,
         footer,
         #search_result {
@@ -377,7 +378,8 @@
     <input type="text" name="search_bar" id="search_bar" placeholder="Search For...(case sensitive)">
     <div id="search_result">
     </div>
-    <embed id="main_frame" src="./templates/home.html" type="">
+    <iframe id="main_frame" name="main_frame" src="./templates/home.html" frameborder="0"></iframe>
+    <!-- <embed id="main_frame" src="./templates/home.html" type=""> -->
     <!-- <main></main> -->
     <footer><sup>est. 1986 &copy; &trade;</sup></footer>
     <script defer>
