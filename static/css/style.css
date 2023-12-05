@@ -9,21 +9,23 @@
     --fnt--03: 'Poiret One', cursive;
     --fnt--04: 'Antonio', sans-serif;
     --fnt--05: 'Oswald', sans-serif;
-    --action: hsl(0, 100%, 46%);
-    --primary: hsl(0, 0%, 0%);
-    --secondary: hsl(0, 0%, 100%);
-    --tertiary: hsl(0, 0%, 13%);
-    --quadiary: hsl(0, 0%, 87%);
+    --action: hsla(0, 100%, 46%, 0.8);
+    --primary: hsla(0, 0%, 0%, 0.8);
+    --secondary: hsla(0, 0%, 100%, 0.8);
+    --tertiary: hsla(0, 0%, 13%, 0.8);
+    --quadiary: hsla(0, 0%, 87%, 0.8);
     /* --gradient: ; */
 }
 *,
 *::before,
 *::after {
+    /* outline: 1px dashed cornflowerblue; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--fnt--05);
     line-height: 1.6;
+    color-scheme: light;
     /* background-color: black; */
     /* color: white; */
     /* border: 1px white; */
@@ -53,11 +55,11 @@ nav ul li ul.dropdown li {
     display: block;
 }
 nav ul li ul.dropdown {
-    width: 100%;
+    width: 200%;
     position: absolute;
     z-index: 999;
     display: none;
-    background-color: var(--secondary);
+    /* background-color: var(--secondary); */
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 nav ul li a:hover {
@@ -70,23 +72,25 @@ nav ul li:hover ul.dropdown {
 }
 
 body {
+    width: 100dvw;
+    height: 100dvh;
+    /* margin: 4px; */
+    padding: 4px;
     font-size: 1.6rem;
     /* background-color: var(--primary); */
-    width: 100vw;
-    height: 100vh;
     display: grid;
-    grid-template-rows: .5fr .25fr .25fr 1.25fr 3.5fr .25fr;
+    grid-template-rows: .5fr .25fr 1.25fr 3.25fr .5fr .25fr;
     grid-template-columns: repeat(6 1fr);
     grid-template-areas:
-        'h h n n n n'
-        'e e e e s s'
-        'e e e e r r'
-        'e e e e r r'
-        'e e e e r r'
-        'e e e e f f';
-    /* gap: 2em; */
+        'h h h n n n'
+        'r r e e e e'
+        'r r e e e e'
+        'r r e e e e'
+        'r r e e e e'
+        's s s s f f';
+    gap: 4px;
     /* padding: 2em; */
-    background: url("./img/dfs_logo_2023.png");
+    background: url("../img/dfs_logo_2023.png");
 }
 
 header {
@@ -109,6 +113,7 @@ embed {
     grid-area: e;
     width: 100%;
     height: 100%;
+    resize: both;
     /* background-color: var(--secondary); */
 }
 main {
@@ -117,6 +122,8 @@ main {
 footer {
     grid-area: f;
     color: var(--action);
+    align-content: center;
+    
 }
 #search_bar {
     grid-area: s;
@@ -196,7 +203,8 @@ border: 1px solid green;
 border: 1px solid yellow;
 */
 ::-webkit-scrollbar-track {
-    background-color: var(--quadiary);
+    /* background-color: var(--quadiary); */
+    background-color: transparent;
 }
 /*
 border-radius: 0.25em;
@@ -213,13 +221,40 @@ margin: 1em 0;
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track-piece,
 */
-.clayX {
-    backdrop-filter: blur(5px);
-    /* background-color: hsl(0, 0%, 100%); */
-    /* border-radius: 26px; */
-    border-radius: 0.5em;
-    /* box-shadow:
-        35px 35px 68px 0px hsla(214, 100%, 78%, 0.5),
-        inset -8px -8px 16px 0px hsla(214, 100%, 78%, 0.6),
-        inset 0px 11px 28px 0px hsl(0, 0%, 100%); */
+.clay {
+    backdrop-filter: blur(0.4px);
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 4px;
+    border-radius: 0.4em;
+    box-shadow:
+        4px 4px 4px 0px hsla(214, 100%, 78%, 0.5),
+        inset -4px -4px 4px 0px hsla(214, 100%, 78%, 0.6),
+        inset 0px 4px 4px 0px hsl(0, 0%, 100%);
+}
+.glass {
+/* From https://css.glass */
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    /* -webkit-backdrop-filter: blur(4px); */
+    border: 1px solid rgba(255, 255, 255, 0.48);
+}
+.linear-gradient {
+    background-image: linear-gradient(rebeccapurple, teal);
+}
+
+.radial-gradient {
+    background-image: radial-gradient(teal, rebeccapurple);
+}
+
+.conic-gradient {
+    background-image: conic-gradient(rebeccapurple, teal, green, blue, purple);
+}
+
+.hide {
+    display: none;
+}
+.show {
+    display: contents;
 }
