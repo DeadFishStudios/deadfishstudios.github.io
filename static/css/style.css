@@ -102,26 +102,27 @@ header h1 {
 .card_7 { width: 816px; height: 1056px; }
 
 .meme {
+    margin: 0 auto;
     padding: 0.5rem;
     background-image: url("..//img/Are_You_Right_There_Father_Ted.jpg");
     background-repeat: no-repeat;
-    background-position: 62% 50%;
+    background-position: 55% 50%;
     background-size: cover;
-    width: 100%;
+    width: 80%;
     height: 100%;
 
 }
 .meme p {
     /* position: relative; */
-    text-wrap: pre-wrap;
+    text-wrap: balance;
     /* top: auto; */
     /* left: auto; */
     /* right: 0.5rem; */
     /* bottom: 1rem; */
     font-weight: 800;
-    font-size: 1.9em;
+    font-size: 1.85em;
     text-align: right;
-    width: 70%;
+    width: 73%;
     /* -webkit-text-fill-color: white; */
     /* -webkit-text-size-adjust: 90%; */
     /* text-size-adjust: 90%; */
