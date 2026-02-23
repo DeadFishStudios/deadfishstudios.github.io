@@ -105,23 +105,23 @@ header h1 {
     padding: 0.5rem;
     background-image: url("..//img/Are_You_Right_There_Father_Ted.jpg");
     background-repeat: no-repeat;
-    background-position: 65% 10%;
+    background-position: 62% 50%;
     background-size: cover;
     width: 100%;
     height: 100%;
 
 }
 .meme p {
-    position: relative;
+    /* position: relative; */
     text-wrap: pre-wrap;
-    top: auto;
-    left: auto;
-    right: 0.5rem;
-    bottom: -15rem;
+    /* top: auto; */
+    /* left: auto; */
+    /* right: 0.5rem; */
+    /* bottom: 1rem; */
     font-weight: 800;
     font-size: 1.9em;
     text-align: right;
-    width: 75%;
+    width: 70%;
     /* -webkit-text-fill-color: white; */
     /* -webkit-text-size-adjust: 90%; */
     /* text-size-adjust: 90%; */
@@ -135,4 +135,5 @@ header h1 {
         -1px 1px 0 black,
         1px 1px 0 black;
     float: inline-end;
+    /* transform: translateY(100%); */
 }
