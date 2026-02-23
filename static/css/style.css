@@ -21,6 +21,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Libre Franklin", Helvetica, Arial, Verdana, sans-serif;
+    line-height: 1.25;
+    outline: 1px dashed black;
+}
+html {
+    /* 16px to 10px */
+    /* font-size: 62.5%; */
+    /* line-height: 1.6; */
 }
 body {
     padding: 0.5rem;
@@ -34,8 +42,8 @@ body {
     grid-template-rows: 1fr 1fr 9fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    'H H H H'
-    'N N N N'
+    'H H H N'
+    'M M M M'
     'M M M M'
     'F F F F';
 }
@@ -47,29 +55,66 @@ header {grid-area: H;}
 nav {grid-area: N;}
 main {grid-area: M; overflow-y: auto;}
 footer {grid-area: F;}
+
+header h1 {
+    font-size: 26pt;
+    color: white;
+    -webkit-text-stroke: 2px red;
+}
+
 .card {
-    display: inline-block;
-    width: 12rem;
-    height: 18rem;
-    outline: 1px solid black;
+    /* display: inline-block; */
     background-color: antiquewhite;
     border-radius: 0.5rem;
     padding: 0.25rem;
 }
 .card figure {
-    height: 4rem;
-    outline: 1px solid black;
+    height: 30%;
 }
 .card figure img {
-    height: 100%;
+    height: 70%;
 }
 .card figure figcaption {
     padding: 0.25rem;
-    outline: 1px solid black;
     background-color: bisque;
+    font-style: italic;
+    text-align: center;
 }
 .card section {
     padding: 0.25rem;
-    outline: 1px solid black;
+    height: 70%;
     background-color: blanchedalmond;
+}
+.card section h3 {
+    font-family: "Century-Light", serif;
+    text-align: center;
+}
+.card section p {
+    text-align: justify;
+}
+
+.card_1 { width: 192px; height: 336px; }
+.card_2 { width: 240px; height: 408px; }
+.card_3 { width: 240px; height: 432px; }
+.card_4 { width: 264px; height: 456px; }
+.card_5 { width: 408px; height: 480px; }
+.card_6 { width: 408px; height: 960px; }
+.card_7 { width: 816px; height: 1056px; }
+
+.meme {
+    background-image: url("..//img/Are_You_Right_There_Father_Ted.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.meme p {
+    text-wrap: pre-wrap;
+    font-weight: bolder;
+    font-size: 2em;
+    -webkit-text-fill-color: white;
+    -webkit-text-size-adjust: auto;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
 }
