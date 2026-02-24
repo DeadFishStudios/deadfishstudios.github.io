@@ -74,6 +74,9 @@ section img:hover {
     transform: scale(2) translate(50%, 50%);
 }
 article {
+    position: relative;
+    line-height: 1.7;
+    text-align: right;
     display: inline-block;
     padding: 8px;
     width: 540px;
@@ -84,9 +87,34 @@ article {
 article:not(:last-of-type) {
     margin-bottom: 0.25rem;
 }
-a {
+article img {
+    width: 10%;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+article p {
+    position: absolute;
+    top: 82%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-wrap: balance;
+    font-weight: 800;
+    font-size: 13pt;
+    color: ivory;
+    text-shadow:
+        2px 2px 0 black,
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+    float: inline-end;
+}
+article a {
     text-decoration: none;
-    background-color: white;
+    /* background-color: white; */
+    color: goldenrod;
 }
 
 .card {
@@ -134,20 +162,22 @@ a {
     background-position: 80% 50%;
     background-size: cover;
     aspect-ratio: 4/3;
-    width: 540px;
+    width: 100%;
+    /* width: 540px; */
     height: 400px;
 
 }
 .meme p {
     position: absolute;
     top: 73%;
-    left: 60%;
+    left: 57%;
+    /* bottom: 3%; */
     transform: translate(-50%, -50%);
     text-wrap: balance;
     font-weight: 800;
     font-size: 18pt;
     text-align: right;
-    width: 75%;
+    width: 80%;
 
     color: ivory;
     text-shadow:
