@@ -18,34 +18,38 @@
     p {color: brown;}
 }
 *, *::before, *::after {
-    padding: 0;
     margin: 0;
+    margin: 0;
+    padding: 0;
+    padding: 0;
+    box-sizing: border-box;
     box-sizing: border-box;
     font-family: "Libre Franklin", Helvetica, Arial, Verdana, sans-serif;
     line-height: 1.25;
     /* outline: 1px dashed black; */
 }
-html {
+/* html { */
     /* 16px to 10px */
     /* font-size: 62.5%; */
     /* line-height: 1.6; */
-}
+/* } */
 body {
     padding: 0.5rem;
-    background-color: lightgray;
+    background-color: black;
     width: 100dvw;
     height: 100dvh;
 }
 .grid {
     display: grid;
     gap: 0.25rem;
-    grid-template-rows: 1fr 1fr 9fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 20fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 20fr 1fr 1fr;
     grid-template-areas:
-    'H H H N'
-    'M M M M'
-    'M M M M'
-    'F F F F';
+    'H H H H H'
+    'M M M M M'
+    'M M M M M'
+    'N N N N N'
+    'F F F F F';
 }
 header,nav, main, footer {
     background-color: ivory;
@@ -56,10 +60,33 @@ nav {grid-area: N;}
 main {grid-area: M; overflow-y: auto;}
 footer {grid-area: F;}
 
-header h1 {
-    font-size: 26pt;
-    color: white;
-    -webkit-text-stroke: 2px red;
+/* h1, h2, h3, h4, h5, h6 { */
+    /* font-size: 26pt; */
+    /* color: white; */
+    /* -webkit-text-stroke: 2px red; */
+/* } */
+
+
+img {
+    height: 96px;
+}
+section img:hover {
+    transform: scale(2) translate(50%, 50%);
+}
+article {
+    display: inline-block;
+    padding: 8px;
+    width: 540px;
+    height: 270px;
+    /* outline: 1px solid black; */
+    background-color: antiquewhite;
+}
+article:not(:last-of-type) {
+    margin-bottom: 0.25rem;
+}
+a {
+    text-decoration: none;
+    background-color: white;
 }
 
 .card {
@@ -92,7 +119,6 @@ header h1 {
 .card section p {
     text-align: justify;
 }
-
 .card_1 { width: 192px; height: 336px; }
 .card_2 { width: 240px; height: 408px; }
 .card_3 { width: 240px; height: 432px; }
@@ -102,32 +128,27 @@ header h1 {
 .card_7 { width: 816px; height: 1056px; }
 
 .meme {
-    margin: 0 auto;
-    padding: 0.5rem;
+    position: relative;
     background-image: url("..//img/Are_You_Right_There_Father_Ted.jpg");
     background-repeat: no-repeat;
-    background-position: 55% 50%;
+    background-position: 80% 50%;
     background-size: cover;
-    width: 80%;
-    height: 100%;
+    aspect-ratio: 4/3;
+    width: 540px;
+    height: 400px;
 
 }
 .meme p {
-    /* position: relative; */
+    position: absolute;
+    top: 73%;
+    left: 60%;
+    transform: translate(-50%, -50%);
     text-wrap: balance;
-    /* top: auto; */
-    /* left: auto; */
-    /* right: 0.5rem; */
-    /* bottom: 1rem; */
     font-weight: 800;
-    font-size: 1.85em;
+    font-size: 18pt;
     text-align: right;
-    width: 73%;
-    /* -webkit-text-fill-color: white; */
-    /* -webkit-text-size-adjust: 90%; */
-    /* text-size-adjust: 90%; */
-    /* -webkit-text-stroke-color: black; */
-    /* -webkit-text-stroke-width: 0.125rem; */
+    width: 75%;
+
     color: ivory;
     text-shadow:
         3px 3px 0 black,
@@ -137,4 +158,30 @@ header h1 {
         1px 1px 0 black;
     float: inline-end;
     /* transform: translateY(100%); */
+}
+
+
+.container {
+    /* Establishes the container as the reference point for the text's absolute positioning */
+    position: relative;
+    /* Centers the text horizontally within the container by default */
+    text-align: center;
+    color: white; /* Makes text visible on a dark image */
+}
+
+.image {
+    /* Ensures the image fills the container */
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay {
+    /* Positions the text relative to the nearest positioned ancestor (the container div) */
+    position: absolute;
+    /* Place the text in the center */
+    top: 50%;
+    left: 50%;
+    /* Adjusts the text position by half of its own width and height for perfect centering */
+    transform: translate(-50%, -50%);
+    font-size: 24px; /* Example styling */
 }
