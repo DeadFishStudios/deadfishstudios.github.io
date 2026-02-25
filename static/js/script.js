@@ -1,7 +1,9 @@
 const container = document.querySelector(".container")
-// container
+const meme = document.querySelector(".meme");
 const p1 = document.querySelector(".p1")
+const question = document.querySelector("#question");
 const p2 = document.querySelector(".p2")
+// container
 let qs = [
 	`Are you a refugee, from the Novus Ordo Missae?`,
 	`Confused about being catholic?`,
@@ -19,11 +21,9 @@ let qs = [
 ]
 // p1.textContent= qs[0]
 
-const meme = document.querySelector(".meme");
-const question = document.querySelector("#question");
-const q = [
+const qes = [
     "it is Protestant",
-    "it is okay for two men to have the bum sex",
+    "it is okay for two men to have the bum s@x",
     "unrepentant gaysexualists can get blessed in a Catholic Church",
     "unrepentant gaysexualists can get sacramentally married in the Church",
     "I still go to hell for eating meat on a Friday",
@@ -32,17 +32,21 @@ const q = [
     "the Dogmas of the Church are no longer Dogmatic",
     "it is synodal, what is the point of Papal authority",
     "I can wrap my Jimmy in a jacket, and it's not a sin",
+    "It hates Catholicism",
 ]
+// console.log(qes.length);
+
 let x = 0;
-question.textContent = q[0]
-meme.addEventListener('click', ()=> {
-    if (x > q.length) {
-        x = 0;
+// question.textContent = qes[x]
+meme.addEventListener('click', () => {
+    if (x < (qes.length - 1)) {
+        x += 1;
     } else {
-        x = x + 1;
+        x = 0;
     }
     // question.textContent = q[Math.floor(Math.random() * q.length)]
-    question.textContent = q[x]
+    // console.log(x, qes[x]);
+    question.textContent = qes[x]
 })
 
 // let pics = [
