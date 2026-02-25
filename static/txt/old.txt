@@ -1,0 +1,276 @@
+CSS ---------------------------------------------------------------------------
+/* @media (orientation: portrait) { body {background: white; color: indigo;}} */
+/*
+@media (orientation: landscape) { body {background: black; color: red;}}
+*/
+/* @media (min-width: 320px) {
+	p {color: peru;}
+}
+@media (min-width: 480px) {
+	p {color: blue;}
+}
+@media (min-width: 768px) {
+	p {color: aqua;}
+}
+@media (min-width: 1024px) {
+	p {color: olive;}
+}
+@media (min-width: 1200px) {
+	p {color: brown;}
+} */
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* outline: 1px dashed black; */
+	line-height: 1.25;
+	font-family: "Libre Franklin", Helvetica, Arial, Verdana, sans-serif;
+}
+/* html { */
+	/* 16px to 10px */
+	/* font-size: 62.5%; */
+	/* line-height: 1.6; */
+/* } */
+body {
+	padding: 0.75rem;
+	width: 100dvw;
+	height: 100dvh;
+	background-color: black;
+}
+.grid {
+	display: grid;
+	gap: 0.25rem;
+	grid-template-rows: 1fr 1fr 20fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 20fr 1fr 1fr;
+	grid-template-areas:
+	'H H H H H'
+	'M M M M M'
+	'M M M M M'
+	'N N N N N'
+	'F F F F F';
+}
+header,nav, main, footer {
+	background-color: ivory;
+	padding: 0.5rem;
+}
+header {grid-area: H;}
+nav {grid-area: N;}
+main {grid-area: M; overflow-y: auto;}
+footer {grid-area: F;}
+
+/* h1, h2, h3, h4, h5, h6 { */
+	/* font-size: 26pt; */
+	/* color: white; */
+	/* -webkit-text-stroke: 2px red; */
+/* } */
+
+
+img {
+	height: 96px;
+}
+section img:hover {
+	transform: scale(2) translate(50%, 50%);
+}
+article {
+	position: relative;
+	line-height: 1.7;
+	text-align: right;
+	display: inline-block;
+	padding: 8px;
+	width: 540px;
+	height: 270px;
+	/* outline: 1px solid black; */
+	background-color: antiquewhite;
+}
+article:not(:last-of-type) {
+	margin-bottom: 0.25rem;
+}
+article img {
+	width: 10%;
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+}
+article p {
+	position: absolute;
+	top: 82%;
+	left: 55%;
+	transform: translate(-50%, -50%);
+	width: 85%;
+	text-wrap: balance;
+	font-weight: 800;
+	font-size: 13pt;
+	color: ivory;
+}
+.stroke {
+	text-shadow:
+		2px 2px 0 black,
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
+	float: inline-end;
+	
+}
+article a {
+	text-decoration: none;
+	/* background-color: white; */
+	color: goldenrod;
+}
+
+.card {
+	/* display: inline-block; */
+	background-color: antiquewhite;
+	border-radius: 0.5rem;
+	padding: 0.25rem;
+}
+.card figure {
+	height: 30%;
+}
+.card figure img {
+	height: 70%;
+}
+.card figure figcaption {
+	padding: 0.25rem;
+	background-color: bisque;
+	font-style: italic;
+	text-align: center;
+}
+.card section {
+	padding: 0.25rem;
+	height: 70%;
+	background-color: blanchedalmond;
+}
+.card section h3 {
+	font-family: "Century-Light", serif;
+	text-align: center;
+}
+.card section p {
+	text-align: justify;
+}
+.card_1 { width: 192px; height: 336px; }
+.card_2 { width: 240px; height: 408px; }
+.card_3 { width: 240px; height: 432px; }
+.card_4 { width: 264px; height: 456px; }
+.card_5 { width: 408px; height: 480px; }
+.card_6 { width: 408px; height: 960px; }
+.card_7 { width: 816px; height: 1056px; }
+
+.meme {
+	position: relative;
+	background-image: url("..//img/Are_You_Right_There_Father_Ted.jpg");
+	background-repeat: no-repeat;
+	background-position: 80% 50%;
+	background-size: cover;
+	aspect-ratio: 4/3;
+	width: 100%;
+	/* width: 540px; */
+	height: 400px;
+
+}
+.meme p {
+	position: absolute;
+	top: 73%;
+	left: 57%;
+	/* bottom: 3%; */
+	transform: translate(-50%, -50%);
+	text-wrap: balance;
+	font-weight: 800;
+	font-size: 18pt;
+	text-align: right;
+	width: 80%;
+
+	color: ivory;
+	text-shadow:
+		3px 3px 0 black,
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
+	float: inline-end;
+	/* transform: translateY(100%); */
+}
+
+
+.container {
+	/* Establishes the container as the reference point for the text's absolute positioning */
+	position: relative;
+	/* Centers the text horizontally within the container by default */
+	text-align: center;
+	color: white; /* Makes text visible on a dark image */
+}
+
+.image {
+	/* Ensures the image fills the container */
+	width: 100%;
+	height: auto;
+}
+
+.text-overlay {
+	/* Positions the text relative to the nearest positioned ancestor (the container div) */
+	position: absolute;
+	/* Place the text in the center */
+	top: 50%;
+	left: 50%;
+	/* Adjusts the text position by half of its own width and height for perfect centering */
+	transform: translate(-50%, -50%);
+	font-size: 24px; /* Example styling */
+}
+HTML --------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cult of the Dead Fish</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <script src="./static/js/script.js" defer></script>
+</head>
+<body class="">
+    <header>
+        <!-- <h1>D.F.S.</h1> -->
+        <h3>Lex Orandi, Lex Credendi, Lex Vivendi.</h3>
+    </header>
+    <nav>N</nav>
+    <footer>
+        <h3>Extra Ecclesiam nulla salus</h3>
+    </footer>
+    <main>
+        <!-- M -->
+        <article class="meme">
+            <p>
+				Good morning, Holy Father!
+                <br>Is The Catholic Church's stance now, that <span id="question"></span>?
+                <br>Is that correct, Father?
+			</p>
+        </article>
+    </main>
+</body>
+</html>
+JS ----------------------------------------------------------------------------
+const meme = document.querySelector(".meme");
+const question = document.querySelector("#question");
+const q = [
+    "it is Protestant",
+    "it is okay for two men to have the bum sex",
+    "unrepentant gaysexualists can get blessed in a Catholic Church",
+    "unrepentant gaysexualists can get sacramentally married in the Church",
+    "I still go to hell for eating meat on a Friday",
+    "anybody off the street can handle Consecrated Hosts",
+    "I can divorce my wife and still go to communion",
+    "the Dogmas of the Church are no longer Dogmatic",
+    "it is synodal, what is the point of Papal authority",
+    "I can wrap my Jimmy in a jacket, and it's not a sin",
+]
+let x = 0;
+question.textContent = q[x]
+meme.addEventListener('click', ()=> {
+    if (x > q.length) {
+        x = 0;
+    } else {
+        x = x + 1;
+    }
+    // question.textContent = q[Math.floor(Math.random() * q.length)]
+    question.textContent = q[x]
+})
+-------------------------------------------------------------------------------
