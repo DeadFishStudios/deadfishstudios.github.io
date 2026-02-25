@@ -19,8 +19,10 @@ body {
 	background-position: 50% 0%;
 	position: relative;
 	/* padding: 2%; */
-	width: 600px;
-	height: 700px;
+	/* width: 600px; */
+	/* height: 700px; */
+	width: 100dvw;
+	height: 100dvh;
 	background-color: white;
 	text-align: center;
 }
