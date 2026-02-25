@@ -34,7 +34,7 @@ const q = [
     "I can wrap my Jimmy in a jacket, and it's not a sin",
 ]
 let x = 0;
-question.textContent = q[4]
+question.textContent = q[0]
 meme.addEventListener('click', ()=> {
     if (x > q.length) {
         x = 0;
