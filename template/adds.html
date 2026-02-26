@@ -6,11 +6,14 @@
 	<title>Document</title>
 	<style>
 		*, *::before, *::after {
+			--fntfam1: "Libre Franklin", Helvetica, Arial, Verdana, sans-serif;
+			--fntfam2: "Century-Light", serif;
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
 			/* outline: 1px solid red; */
 			line-height: 1.1;
+			font-family: var(--fntfam1);
 		}
 		body {
 			padding: 1rem;
@@ -27,8 +30,14 @@
 			background-color: antiquewhite;
 			position: relative;
 			width: 500px;
-			height: 650px;
+			/* height: 650px; */
+			/* width: 100%; */
+			height: 700px;
 			text-align: center;
+			background-position: 50% 50%;
+			background-image: 10%;
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 		.p1 {
 			color: ivory;
@@ -42,25 +51,25 @@
 			height: auto;
 			font-size: 20pt;
 		}
-		.logo {
-			width: 8%;
+		.logo1 {
+			width: 40px;
 			/* height: 10%; */
 			position: absolute;
 			z-index: 3;
-			left: 46%;
+			left: calc(50 - 20px);
 			top: auto;
-			right: 46%;
+			right: calc(50 - 20px);
 			bottom: 6%;
 		}
 		.logo2 {
-			width: 8%;
+			width: 40px;
 			/* height: 10%; */
 			position: absolute;
 			z-index: 2;
-			left: calc(46% + 2px);
+			left: calc(calc(50% -20px) + 1px);
 			top: auto;
-			right: calc(46% - 2px);
-			bottom: calc(6% - 2px);
+			right: calc(calc(50% -20px) - 1px);
+			bottom: calc(6% - 1px);
 		}
 		.p2 {
 			color: ivory;
@@ -77,8 +86,21 @@
 		.p1 cite {
 			font-size: 14pt;
 		}
-		/* .container:nth-child(1){background-image: url("../static/img/untitled folder 1/Knight Bowing.jpeg");} */
-		/* .container:nth-child(13){background-image: url("../static/img/untitled folder 1/Our\ Lord.jpeg");} */
+		article:nth-child(1){background-image: url("../static/img/03_mass_paintings/All The Saints.jpeg");}
+		article:nth-child(2){background-image: url("../static/img/01_paintings/Agnus Dei Wallpaper.jpeg");}
+		article:nth-child(3){background-image: url("../static/img/06_adoration/Holy God.jpeg");}
+		article:nth-child(4){background-image: url("../static/img/04_incense/Catholic\ Lent\ Pictures.jpeg");}
+		article:nth-child(5){background-image: url("../static/img/05_tlm/tG6l8fD-2.png");}
+		article:nth-child(6){background-image: url("../static/img/03_mass_paintings/tlm_1.jpg");}
+		article:nth-child(7){background-image: url("../static/img/05_tlm/Liturgical Arts Journal.jpeg");}
+		article:nth-child(8){background-image: url("../static/img/08_misc/notra_dame_fire.jpg");}
+		article:nth-child(9){background-image: url("../static/img/07_pope_leoxiv/Leone XIV_1.jpeg");}
+		article:nth-child(10){background-image: url("../static/img/07_pope_leoxiv/LEÃO XIV.jpeg");}
+		article:nth-child(11){background-image: url("../static/img/06_adoration/Holy God.jpeg");}
+		article:nth-child(12){background-image: url("../static/img/07_pope_leoxiv/Catholic Chalice And Ciborium Images.jpeg");}
+		article:nth-child(13){background-image: url("../static/img/02_rosary/Gothic Catholicism.jpeg");}
+		article:nth-child(14){background-image: url("../static/img/05_tlm/Beautiful Pictures Of Churches.jpeg");}
+		article:nth-child(15){background-image: url("../static/img/03_mass_paintings/Classic Painting Humor.jpeg");}
 		.stroke {
 			text-shadow:
 				2px 2px 0 black,
@@ -92,12 +114,12 @@
 			text-decoration: none;
 		}
 		a:hover {
-			color: goldenrod;
+			color: gold;
 		}
 	</style>
 </head>
 <body>
-	<a href="../index.html">INDEX</a>
+	<!-- <a href="../index.html">INDEX</a> -->
 	<article class="container">
 		<p class="p1 stroke">
 			Therefore, brethren, stand fast; and hold the traditions which you have learned, whether by word, or by our epistle.
@@ -107,104 +129,106 @@
 				<!-- <br> - Douay-Rheims Bible -->
 			</cite>
 		</p>
-		<!-- <img src="./sspx_X.s÷vg" alt="" class="logo"> -->
-		<img src="../static/img/sspx_w.svg" alt="" class="logo">
-		<img src="../static/img/sspx_b.svg" alt="" class="logo2">
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
 	</article>
-	
 	<article class="container">
 		<p class="p1 stroke">
-			are you confused?
-			<br>are you just curious?
-			<br>do you feel lost in a world gone wrong?
-			<br>do you want to get closer to god?
-			<br>do you want to have a deeper understanding of your caltholic faith?
-			<br>fulfill your sunday obligation.
-			<br>locate an sspx chapel, near you.
+			A§re you confused?
+			<br>Are you just curious?
+			<br>Do you feel lost in a world gone wrong?
+			<br>Do you want to get closer to god?
+			<br>Do you want to have a deeper understanding of your caltholic faith?
+			<br>Fulfill your sunday obligation.
+			<br>Locate an SSPX chapel, near you.
 		</p>
-		<!-- <img src="./sspx_X.svg" alt="" class="logo"> -->
-		<img src="../static/img/sspx_w.svg" alt="" class="logo">
-		<img src="../static/img/sspx_b.svg" alt="" class="logo2">
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
-	</article>z
-
+	</article>
 	<article class="container">
 		<p class="p1 stroke">Are you a refugee, from the Novus Ordo Missae?</p>
-		<img src="./sspx_X.svg" alt="" class="logo">
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
 	</article>
-
 	<article class="container">
-		<p class="p1 stroke">Confused about being catholic?</p>
-		<img src="./sspx_X.svg" alt="" class="logo">
+		<p class="p1 stroke">Confused about being Catholic?</p>
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
 	</article>
-
 	<article class="container">
 		<p class="p1 stroke">Tiered of Mass without reverence?</p>
-		<img src="./sspx_X.svg" alt="" class="logo">
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
 	</article>
-
 	<article class="container">
 		<p class="p1 stroke">Do you feel robbed of the Mass of the Saints?</p>
-		<img src="./sspx_X.svg" alt="" class="logo">
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
 	</article>
-
 	<article class="container">
 		<p class="p1 stroke">Looking for what is what is Beautiful, Eternal and True?</p>
-		<img src="./sspx_X.svg" alt="" class="logo">
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
 	</article>
-
 	<article class="container">
 		<p class="p1 stroke">Tiered of continual renewal? <br>Looking for stability?</p>
-		<img src="./sspx_X.svg" alt="" class="logo">
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
 	</article>
-
 	<article class="container">
 		<p class="p1 stroke">Would you ride on a bus, <br>if the driver was facing you?</p>
-		<img src="./sspx_X.svg" alt="" class="logo">
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
 	</article>
-
 	<article class="container">
 		<p class="p1 stroke">One liturgical abuse to many?</p>
-		<img src="./sspx_X.svg" alt="" class="logo">
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
 	</article>
-
 	<article class="container">
-		<p class="p1 stroke">Want to put Christ back at the center of the Mass.</p>
-		<img src="./sspx_X.svg" alt="" class="logo">
+		<p class="p1 stroke">Want to put Christ back at the center of the Mass?</p>
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
 	</article>
-
 	<article class="container">
-		<p class="p1 stroke">Do you want the Faith, not the Politics.</p>
-		<img src="./sspx_X.svg" alt="" class="logo">
+		<p class="p1 stroke">Do you want the Faith, not the Politics?</p>
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
 	</article>
-
 	<article class="container">
-		<p class="p1 stroke">Do you have what it takes to be catholic?</p>
-		<img src="../static/img/sspx_w.svg" alt="" class="logo">
-		<img src="../static/img/sspx_b.svg" alt="" class="logo2">
+		<p class="p1 stroke">Do you have what it takes to be Catholic?</p>
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en" target="_blank">sspx.org</a></p>
 	</article>
-
 	<article class="container">
 		<p class="p1 stroke">Tiered of the 70's art style?</p>
-		<img src="./sspx_X.svg" alt="" class="logo">
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
 	</article>
-
 	<article class="container">
 		<p class="p1 stroke">When last did you go to confession?</p>
-		<img src="./sspx_X.svg" alt="" class="logo">
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
+		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
+	</article>
+	<article class="container">
+		<p class="p1 stroke">Tired of the modern modernisation of modernity from the Modernists?</p>
+		<img src="../static/img/logos/sspx_w.svg" alt="" class="logo1">
+		<img src="../static/img/logos/sspx_b.svg" alt="" class="logo2">
 		<p class="p2 stroke">Do you want know more? <a href="https://fsspx.org/en">sspx.org</a></p>
 	</article>
 

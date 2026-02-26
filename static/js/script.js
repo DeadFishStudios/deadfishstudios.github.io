@@ -22,22 +22,22 @@ let qs = [
 // p1.textContent= qs[0]
 
 const qes = [
+    "It hates Catholicism",
     "it is Protestant",
+    "the Dogmas of the Church are no longer Dogmatic",
+    "you can go to a Freemasonic ceremony and be made Bishop",
+    "I still go to hell for eating meat on a Friday",
+    "it is synodal, what is the point of Papal authority",
+    "anybody off the street can handle Consecrated Hosts",
+    "I can divorce my wife and still go to communion",
+    "I can wrap my Jimmy in a jacket, and it's not a sin",
     "it is okay for two men to have the bum s@x",
     "unrepentant gaysexualists can get blessed in a Catholic Church",
     "unrepentant gaysexualists can get sacramentally married in the Church",
-    "I still go to hell for eating meat on a Friday",
-    "anybody off the street can handle Consecrated Hosts",
-    "I can divorce my wife and still go to communion",
-    "the Dogmas of the Church are no longer Dogmatic",
-    "it is synodal, what is the point of Papal authority",
-    "I can wrap my Jimmy in a jacket, and it's not a sin",
-    "It hates Catholicism",
 ]
 // console.log(qes.length);
 
 let x = 0;
-// question.textContent = qes[x]
 meme.addEventListener('click', () => {
     if (x < (qes.length - 1)) {
         x += 1;
@@ -48,6 +48,8 @@ meme.addEventListener('click', () => {
     // console.log(x, qes[x]);
     question.textContent = qes[x]
 })
+question.textContent = qes[x]
+
 
 // let pics = [
 // 	"Knight" = [
