@@ -3,66 +3,85 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>SSPX Social Media Campaign</title>
-    <link rel="stylesheet" href="./static/css/style.css">
-    <script src="./static/js/script.js" defer></script>
+	<title>Document</title>
+	<style>
+		*, *::before, *::after {
+			--fntfam1: "Libre Franklin", Helvetica, Arial, Verdana, sans-serif;
+			--fntfam2: "Century-Light", serif;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			/* outline: 1px solid red; */
+			line-height: 1.1;
+			font-family: var(--fntfam1);
+		}
+		html {
+			/* padding: 0.5rem; */
+		}
+		body {
+			background-color: gray;
+			color: white;
+		}
+		.grid {
+			display: grid;
+			width: 100dvw;
+			height: 100dvh;
+			grid-template-rows: 4% 94% 2%;
+			grid-template-columns: 1fr 10fr 1fr;
+			grid-template-areas:
+				'H H H'
+				'N I I'
+				'F F F';
+			}
+			header {
+				grid-area: H;
+			}
+			header p {
+			padding: 0.25rem;
+			text-align: center;
+			font-size: 18pt;
+			font-weight: 800;
+			text-transform: uppercase;
+		}
+		nav {
+			grid-area: N;
+			background-color: gray;
+		}
+		iframe {
+			grid-area: I;
+			width: 100%;
+			height: 100%;
+		}
+		footer {
+			grid-area: F;
+		}
+		nav a {
+			padding: 0.125rem;
+			display: block;
+			width: 100%;
+			margin-bottom: 1%;
+			text-align: center;
+			text-decoration: none;
+			background-color: white;
+			background-color: gr;
+		}
+		nav a:hover {
+			padding: 0.125rem;
+			background-color: blue;
+			color: white;
+		}
+	</style>
 </head>
-<body>
-	<article class="meme">
-		<!-- <h1 class="h1">h1</h1> -->
-		<p class="p1 stroke">
-			Good morning, Holy Father!
-            <br>Is The Catholic Church's stance now, that <span id="question"></span>?
-            <br>Is that correct, Father?
-        </p>
-		<!-- <img src="./static/img/sspx_w.svg" alt="Logo" class="logo"> -->
-		<!-- <p class="p2 stroke">Do you want to know more? <br><a href="https://fsspx.org/en" target="_blank">sspx.org</a></p> -->
-	</article>
-	<a href="./template/adds.html">ADDS</a>
-
-<!-- 
-		<article class="card card_4">
-			<figure>
-				<img src="./static/img/sspx.svg" alt="img">
-				<img src="./static/img/sppx_clr1.svg" alt="img">
-				<img src="./static/img/sppx_clr2.svg" alt="img">
-				<figcaption>Caption</figcaption>
-			</figure>
-			<section>
-				<h3>Card 4</h3>
-				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, deserunt quod. Excepturi facilis ipsum commodi laudantium? Ex suscipit quos laborum modi quae fugiat similique debitis, aliquam consequuntur! Magni, possimus quam!</p>
-			</section>
-		</article>
-
-		<article class="card card_5">
-			<img src="./static/img/sspx_b.svg" alt="">
-			<p>
-				Are you confused?
-				<br>Are you just curious?
-				<br>Do you feel lost in a world gone wrong?
-				<br>Do you want to get closer to god?
-				<br>Do you want to have a deeper understanding of your caltholic faith?
-				<br>Fufill your sunday obligation.
-				<br>Locate an sspx chapel, near you.
-				<br>Do you want to know more?
-				<br><a href="https://fsspx.org/en">sspx.org</a>
-			</p>
-		</article>
-		<article class="container">
-			<img src="./static/img/sspx_b.svg" alt="">
-			<p>
-				Therefore, brethren, stand fast; and hold the traditions which you have learned, whether by word, or by our epistle.
-				<br>
-				<em><sub>2nd Epistle of St Paul to the Thessalonians Chapter 2: 14 - Douay-Rheims Bible</sub></em>
-			</p>
-		</article>
-		<article class="container">
-			<img src="./static/img/sspx_b.svg" alt="">
-			<p>
-			</p>
-			<br>Do you want know more?<br><a href="https://fsspx.org/en">sspx.org</a>
-
-		</article> -->
-
+<body class="grid">
+	<header><p>Extra Ecclesiam nulla salus</p></header>
+	<nav>
+		<a href="./template/adds.html" target="iframe">Adds</a>
+		<a href="./template/meme.html" target="iframe">Meme</a>
+		<a href="./template/prayers.html" target="iframe">Prayers</a>
+		<!-- <a href="./"></a> -->
+	</nav>
+	<iframe src="./template/adds.html" frameborder="0" name="iframe"></iframe>
+	<footer></footer>
 </body>
 </html>
+
