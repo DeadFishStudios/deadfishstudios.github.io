@@ -16,7 +16,6 @@
 			font-family: var(--fntfam1);
 		}
 		html {
-			/* padding: 0.5rem; */
 		}
 		body {
 			background-color: gray;
@@ -26,17 +25,18 @@
 			display: grid;
 			width: 100dvw;
 			height: 100dvh;
-			grid-template-rows: 4% 94% 2%;
-			grid-template-columns: 1fr 10fr 1fr;
+			grid-template-rows: 4% 3% 92% 1%;
+			grid-template-columns: 1% 98% 1%;
 			grid-template-areas:
-				'H H H'
-				'N I I'
-				'F F F';
-			}
-			header {
-				grid-area: H;
-			}
-			header p {
+			'H H H'
+			'N N N'
+			'. I .'
+			'F F F';
+		}
+		header {
+			grid-area: H;
+		}
+		header p {
 			padding: 0.25rem;
 			text-align: center;
 			font-size: 18pt;
@@ -46,6 +46,7 @@
 		nav {
 			grid-area: N;
 			background-color: gray;
+			padding-left: 0.125rem;
 		}
 		iframe {
 			grid-area: I;
@@ -57,9 +58,10 @@
 		}
 		nav a {
 			padding: 0.125rem;
-			display: block;
-			width: 100%;
-			margin-bottom: 1%;
+			display: inline-block;
+			width: 12%;
+			height: 100%;
+			margin-right: 2px;
 			text-align: center;
 			text-decoration: none;
 			background-color: white;
@@ -80,7 +82,7 @@
 		<a href="./template/prayers.html" target="iframe">Prayers</a>
 		<!-- <a href="./"></a> -->
 	</nav>
-	<iframe src="./template/adds.html" frameborder="0" name="iframe"></iframe>
+	<iframe src="./template/prayers.html" frameborder="0" name="iframe"></iframe>
 	<footer></footer>
 </body>
 </html>
