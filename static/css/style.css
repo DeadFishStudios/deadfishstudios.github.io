@@ -6,10 +6,10 @@
 	font-family: "Century-Light", serif;
 }
 body {
-	padding: 0.5rem;
+	padding: 0.25rem;
 	width: 100dvw;
 	height: 100dvh;
-	background-color: black;
+	background-color: antiquewhite;
 }
 .container {
 	margin: 0 auto;

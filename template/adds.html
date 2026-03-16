@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Adds</title>
 	<style>
 		*, *::before, *::after {
 			--fntfam1: "Libre Franklin", Helvetica, Arial, Verdana, sans-serif;
@@ -16,15 +16,15 @@
 			font-family: var(--fntfam1);
 			text-wrap: balance;
 		}
+		body {
+			padding: 0.25rem;
+			width: 100svw;
+			height: 100svh;
+			overflow-y: auto;
+			background-color: antiquewhite;
+		}
 		article {
 			width: 100%;
-		}
-		body {
-			padding: 1rem;
-			/* width: 100dvw; */
-			/* height: 100dvh; */
-			overflow-y: auto;
-			background-color: black;
 		}
 		article:not(:last-of-type) {
 			margin-bottom: 1rem;
@@ -33,7 +33,7 @@
 			margin: 0 auto;
 			background-color: ivory;
 			position: relative;
-			width: 500px;
+			width: clamp(500px, 100%);
 			/* height: 650px; */
 			/* width: 100%; */
 			height: 700px;
@@ -75,7 +75,7 @@
 			left: calc(50 - 20px);
 			top: auto;
 			right: calc(50 - 20px);
-			bottom: 6%;
+			bottom: 8%;
 		}
 		.logo2 {
 			width: 40px;
@@ -85,7 +85,7 @@
 			left: calc(calc(50% -20px) + 1px);
 			top: auto;
 			right: calc(calc(50% -20px) - 1px);
-			bottom: calc(6% - 1px);
+			bottom: calc(8% - 1px);
 		}
 		.p2 {
 			color: ivory;
