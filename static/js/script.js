@@ -4,7 +4,7 @@ const p1 = document.querySelector(".p1")
 const question = document.querySelector("#question");
 const p2 = document.querySelector(".p2")
 // container
-let qs = [
+const qs = [
 	`Are you a refugee, from the Novus Ordo Missae?`,
 	`Confused about being catholic?`,
 	`Tiered of Mass without reverence?`,
@@ -25,7 +25,8 @@ const qes = [
     "It hates Catholicism",
     "it is Protestant",
     "the Dogmas of the Church are no longer Dogmatic",
-    "you can go to a Freemasonic ceremony and be made a Bishop of the Church",
+    "you can go to a Free Masonic ceremony and be made a Bishop of the Church",
+    "you can participate in some shamanistic backwards paganism and rise to the position of Pope",
     "it is now a democracy. Can I vote my self in as Pope then",
     "I still go to hell for eating meat on a Friday",
     "it is synodal, what is the point of Papal authority",
@@ -33,8 +34,10 @@ const qes = [
     "I can divorce my wife and still go to communion",
     "I can wrap my Jimmy in a jacket, and it's not a sin",
     "it is okay for two men to have the bum s@x",
-    "unrepentant gaysexualists can get blessed in a Catholic Church",
-    "unrepentant gaysexualists can get sacramentally married in the Church",
+    "unrepentant gaysoxualists can get blessed in a Catholic Church",
+    "unrepentant gaysoxualists can get sacramentally Married in the Church",
+    "you can have prostrating Mohammedans in the basement and micturating gaysoxualists on parade in the Holy Place, is a good thing",
+    // "open the windows too wide, all the shit can just comes in",
 ]
 // console.log(qes.length);
 
