@@ -1,0 +1,31 @@
+.title {
+    text-orientation: sideways;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    grid-template-rows: 11fr 1fr;
+    grid-template-areas: 'ph pm' 'pf pf';
+}
+
+header {
+    grid-area: ph;
+}
+
+main {
+    grid-area: pm;
+}
+
+footer {
+    grid-area: pf;
+    transform: rotate(180deg);
+}
+
+article {
+    columns: 2;
+}
