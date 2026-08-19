@@ -96,6 +96,7 @@ main {
 	padding: 1ch;
 	grid-area:  R01 / C02 / R11 / C11;
 	overflow-y: auto;
+	place-items: center;
 }
 footer {
 	padding: 1ch;
