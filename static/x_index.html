@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Page Under Construction</title>
+	<link rel="stylesheet" href="./static/css/style.css">
+	<script type="module" src="./static/js/clock.js" defer></script>
+	<script src="./static/js/toggle.js"></script>
+	<style>
+		.card {
+			/* width: 264px; */
+			/* height: 456px; */
+			width: 100%;
+			height: 456px;
+			/* Provides the 3D effect perspective */
+			perspective: 1000px;
+		}
+		.card:not(:last-of-type) {
+			margin-bottom: 1rem;
+		}
+		.inner {
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			/* Smooth transition for the transform property */
+			transition: transform 0.8s;
+			/* Keeps the front and back in 3D space */
+			transform-style: preserve-3d;
+		}
+		.card.is-flipped .inner {
+			/* The class toggled by JavaScript to initiate the flip */
+			transform: rotateY(180deg);
+		}
+		.front, .back {
+			border-radius: 1ch;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 1000;
+			/* Hides the "ghost" of the back side when flipped away */
+			backface-visibility: hidden;
+			box-shadow: 4px 4px 8px 2px lightslategray; 
+		}
+		.front {
+			background-color: ivory;
+		}
+		.back {
+			background-color: ivory;
+			/* Initially rotate the back side 180deg to hide it */
+			transform: rotateY(180deg);
+		}
+	</style>
+</head>
+<body class="grid">
+	<header>
+		<h2 title="">
+			lex orandi, lex credendi, lex vivendi.
+		</h2>
+		<!-- <sub>the law of prayer is the law of belief, which is the law of life</sub> -->
+	</header>
+	<main>
+		<!-- Main -->
+		<article>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--00 : JetBrains Mono]</span></p>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--01 : EB Garamond]</span></p>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--02 : Cinzel]</span></p>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--03 : Cinzel Decorative]</span></p>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--04 : Merriweather]</span></p>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--05 : Lora]</span></p>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--06 : Cormorant Garamond]</span></p>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--07 : Playfair Display]</span></p>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--08 : Montserrat]</span></p>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--09 : Oswald]</span></p>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--10 : Roboto]</span></p>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--11 : Open Sans]</span></p>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--12 : Raleway]</span></p>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--13 : Pinyon Script]</span></p>
+			<p>the quick brown fox jumps over the lazy dog <br><span>[--fnt--14 : Great Vibes]</span></p>
+		</article>
+		<article>
+			<h3>Act of Contrition</h3>
+			<h4><span>[in confession]</span></h4>
+			<p>
+				O my God, I am heartily sorry
+				<br>for having offended Thee;
+				<br>and I detest all my sins,
+				<br>because I dread the loss of heaven
+				<br>and the pains of hell,
+				<br>but most of all
+				<br>because they offend Thee, my God,
+				<br>who art all-good
+				<br>and deserving of all my love.
+				<br>I firmly resolve,
+				<br>with the help of Thy grace,
+				<br>to confess my sins,
+				<br>to do penance
+				<br><span>[to sin no more]</span>
+				<br>and to amend my life.
+				<br><span>[and to avoid all occasions of sin.]</span>
+				<br>Amen.
+			</p>
+		</article>
+		<article>
+			<ul>
+				<li>LSB</li>
+				<li>nasb</li>
+				<li>ESV</li>
+				<li>CSB</li>
+				<li>thought for thought</li>
+				<li>NLT</li>
+				<li>bad ones</li>
+				<li>NIV</li>
+				<li>NKJV</li>
+				<li>KJV</li>
+				<li></li>
+				<li>CSB</li>
+				<li></li>
+				<li>LSB</li>
+			</ul>
+		</article>
+		<article>
+			<h3>IQ TEST</h3>
+			<p>Which of the following has four, eight and one nine?</p>
+			<ol>
+				<li>88889</li>
+				<li>4819</li>
+				<li>888819</li>
+				<li>489</li>
+			</ol>
+		</article>
+		<article class="card" id="myCard">
+			<section class="inner">
+				<section class="front">
+					<h1>Front Side</h1>
+					<p>Click to flip</p>
+				</section>
+				<section class="back">
+					<h1>Back Side</h1>
+					<p>More info here</p>
+				</section>
+			</section>
+		</article>
+		<article class="card" id="myCard">
+			<section class="inner">
+				<section class="front">
+					<h1>Soul of Christ</h1>
+					<p>
+						Soul of Christ, sanctify me.<br>
+						Body of Christ, save me.<br>
+						Blood of Christ, inebriate me.<br>
+						Water from the side of Christ, wash me.<br>
+						Passion of Christ, strengthen me.<br>
+						O good Jesus, hear me.<br>
+						Within Thy wounds, hide me.<br>
+						Separated from Thee let me never be.<br>
+						From the malignant enemy, defend me.<br>
+						At the hour of death, call me.<br>
+						To come to Thee, bid me,<br>
+						That I may praise Thee in the company<br>
+						Of Thy Saints, for all eternity.<br>
+						Amen.
+					</p>
+					<p>
+						<h4>Note:</h4>
+						This prayer, one of St. Ignatius of Loyola's favorites, is prayed especially after receiving Communion. It dates to at least A.D. 1334.
+					</p>
+				</section>
+				<section class="back">
+					<h1>Anima Christi</h1>
+					<p>
+						Anima Christi, sanctifica me.<br>
+						Corpus Christi, salva me.<br>
+						Sanguis Christi, inebria me.<br>
+						Aqua lateris Christi, lava me.<br>
+						Passio Christi, conforta me.<br>
+						O bone Iesu, exaudi me.<br>
+						Intra tua vulnera absconde me.<br>
+						Ne permittas me separari a te.<br>
+						Ab hoste maligno defende me.<br>
+						In hora mortis meae voca me.<br>
+						Et iube me venire ad te,<br>
+						Ut cum Sanctis tuis laudem te<br>
+						in saecula saeculorum.<br>
+						Amen.
+					</p>
+				</section>
+			</section>
+		</article>
+		<!-- xxxxx -->
+
+		<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque facere saepe commodi, neque facilis ratione? Quis, provident reprehenderit impedit aspernatur repudiandae nemo expedita, dignissimos ipsa ab nam iusto corrupti modi?</p> -->
+		<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque facere saepe commodi, neque facilis ratione? Quis, provident reprehenderit impedit aspernatur repudiandae nemo expedita, dignissimos ipsa ab nam iusto corrupti modi?</p> -->
+		<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque facere saepe commodi, neque facilis ratione? Quis, provident reprehenderit impedit aspernatur repudiandae nemo expedita, dignissimos ipsa ab nam iusto corrupti modi?</p> -->
+		<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque facere saepe commodi, neque facilis ratione? Quis, provident reprehenderit impedit aspernatur repudiandae nemo expedita, dignissimos ipsa ab nam iusto corrupti modi?</p> -->
+		<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque facere saepe commodi, neque facilis ratione? Quis, provident reprehenderit impedit aspernatur repudiandae nemo expedita, dignissimos ipsa ab nam iusto corrupti modi?</p> -->
+		<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque facere saepe commodi, neque facilis ratione? Quis, provident reprehenderit impedit aspernatur repudiandae nemo expedita, dignissimos ipsa ab nam iusto corrupti modi?</p> -->
+	</main>
+	<nav>
+		Navigation
+	<h4>English name: <!--<br> Latin n-->ame:</h4>
+	<button>Fonts</button>
+	<button>Act of Contrition</button>
+	<button>Translations</button>
+	<button>IQ Test</button>
+	<button>card flip</button>
+	<button>Anima Christi</button>
+	</nav>
+	<footer><div id="time"></div></footer>
+	<script>
+		// Select the card element by its ID
+		const card = document.querySelectorAll("#myCard");
+		// Add an event listener for a 'click' event
+		for (let i = 0; i < card.length; i++) {
+			card[i].addEventListener('click', () =>  {
+				card[i].classList.toggle('is-flipped')
+			});
+		}
+		// Show hide cards
+		const btns = document.querySelectorAll('button');
+		const arts = document.querySelectorAll('article');
+		for (let i = 0; i < btns.length; i++) {
+			btns[i].addEventListener('click', () =>  {
+				console.log(`Button${i} clicked`);
+				arts[i].classList.toggle('show')
+			});
+		}
+	</script>
+</body>
+</html>
